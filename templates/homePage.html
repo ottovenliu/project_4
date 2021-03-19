@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/bannerTop.css" type="text/css">
+    <link rel="stylesheet" href="/style/main.css" type="text/css">
+</head>
+
+<body>
+    <nav>
+        <div class="bannerTop">
+            <div class="bannerBox">
+                <div class="bannerContent">
+                    會員中心登入介面
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="userInfoBox">
+            <form action="/login" method="POST">
+                <div class="userAccount">
+                    帳號:
+                    <input type="text" id="account" name="account" style="width:80%;" placeholder="請輸入帳號">
+                </div>
+                <div class="userPassWord">
+                    密碼:
+                    <input type="password" id="password" name="password" style="width: 80%;" placeholder="請輸入密碼">
+                </div>
+                <div class="signButton">
+                    <!-- <input type="button" style="width:40%;" value="登入" onclick="javascript:location.href='user'"> -->
+                    <button>登入</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
