@@ -35,20 +35,25 @@ def check():
     if accountInfo.__contains__(Account):
         if(PassWord == accountInfo[Account]):
             print("Success")
-            return redirect('/user')
+            return redirect('/member')
         print("Wrong Password  "+PassWord)
-        return render_template("errorPage.html")
+        return redirect("/error")
     print("Wrong Account  "+Account)
+    return redirect("/error")
+
+
+@app.route("/error", methods=["GET", "POST"])
+def error():
     return render_template("errorPage.html")
 
 
-@app.route("/user", methods=['GET', 'POST'])
+@app.route("/member", methods=['GET', 'POST'])
 def userpage():
     username = session.get('username')
     if username:
         return render_template("userPage.html")
     else:
-        return render_template("errorPage.html")
+        return redirect('/')
 
 
 app.config['DEBUG'] = True
