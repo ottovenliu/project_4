@@ -21,13 +21,13 @@ def cindex():
     return render_template("homePage.html")
 
 
-@app.route("/signOut", methods=['GET', 'POST'])
+@app.route("/signout", methods=['GET', 'POST'])
 def index():
     session.clear()
     return redirect('/')
 
 
-@app.route("/login", methods=["POST"])
+@app.route("/signin", methods=["POST"])
 def check():
     Account = request.form["account"]
     PassWord = request.form["password"]
