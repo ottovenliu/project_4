@@ -17,8 +17,14 @@ app.config['SECRET_KEY'] = os.urandom(24)
 
 @app.route("/", methods=['GET', 'POST'])
 def cindex():
-    session.clear()
+    # session.clear()
     return render_template("homePage.html")
+
+
+@app.route("/signOut", methods=['GET', 'POST'])
+def index():
+    session.clear()
+    return redirect('/')
 
 
 @app.route("/login", methods=["POST"])
